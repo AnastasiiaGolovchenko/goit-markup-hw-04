@@ -6,6 +6,7 @@
  
  білий #FFFFFF
  cекція герой #2F303A
+ бордер іконок #AFB1B8
 
  підвал текст rgba(255, 255, 255, 0.6);
  сірий текст #757575
@@ -23,6 +24,7 @@
   --secondary-font: "Raleway", sans-serif;
 
   /*колір*/
+  --client-border: #afb1b8;
   --portfolio-br-card: #eeeeee;
   --header-br: #ececec;
   --background-colot: #2f303a;
@@ -31,6 +33,7 @@
   --butter-portfolio: #f5f4fa;
 
   /*тіні*/
+  --icon-shadow: rgba(255, 255, 255, 0.1);
   --hero-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   --butter-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -151,6 +154,12 @@ p {
   letter-spacing: 0.02em;
 }
 
+/*іконки хедер*/
+.icon-mailo {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 /* header flex */
 .header-container {
   display: flex;
@@ -234,6 +243,14 @@ p {
 }
 
 /*СЕКЦІЯ ГЕРОЙ*/
+.hero {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(../images/hero/Img-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
 .hero,
 .footer {
   background-color: var(--background-colot);
@@ -273,11 +290,9 @@ p {
   letter-spacing: 0.06em;
   cursor: pointer;
   color: var(--main-colot-wight);
-
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
-
   padding: 8px 30px;
 }
 
@@ -327,6 +342,10 @@ p {
   margin: 0;
 }
 
+.section-about {
+  padding-top: 94px;
+}
+
 /* СЕКЦІЯ ЧИМ МИ ЗАЙМАЄМОСЯ*/
 .title {
   font-weight: bold;
@@ -356,6 +375,18 @@ p {
 .foto-item:last-child {
   margin: 0;
 }
+
+/*іконки*/
+.about-icon {
+  width: 270px;
+  height: 120px;
+  background: var(--butter-portfolio);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*СЕКЦІЯ НАША КОМАНДА*/
 .team {
   background-color: var(--butter-portfolio);
@@ -409,11 +440,45 @@ p {
   padding-bottom: 30px;
 }
 
-/*ПОРТФОЛІО*/
-.portfolio {
-  margin-bottom: 94px;
+/*іконки соцмеред*/
+ .team-icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
+.team-icon-item {
+  margin-right: 10px;
+} 
+
+.team-icon-item:last-child {
+  margin: 0;
+}
+
+.team-icon-link:hover {
+background: var(--hover-txt);
+fill: var(--main-colot-wight);
+border-radius: 50%;
+}
+
+.team-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
+  fill: var(--client-border);
+  background: var(--main-colot-wight);
+  border-radius: 50%;
+}
+
+
+/*ПОРТФОЛІО*/
 .portfolio-btn {
   font-weight: 500;
   font-size: 16px;
@@ -513,9 +578,47 @@ p {
   border: 1px solid var(--portfolio-br-card);
 }
 
+/*ПОСТіЙНІ КЛІЄНТИ*/
+.client-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-colot-wight);
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--client-border);
+  border-radius: 4px;
+  color: var(--client-border-);
+}
+
+/*hover*/
+.client-icon {
+  fill: currentColor;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--hover-txt);
+  color: var(--hover-txt);
+}
+
+.client-item {
+  margin-right: 30px;
+}
+
+.client-item:last-child {
+  margin: 0;
+}
+
 /* ПІДВАЛ*/
 .footer-address {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -539,3 +642,68 @@ p {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.footer-header {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.03em;
+  color: var(--main-colot-wight);
+  text-transform: uppercase;
+  width: 145px;
+  height: 16px;
+  margin-bottom: 20px;
+  line-height: calc(16 / 14);
+}
+
+.footer-txt {
+  display: flex;
+  align-items: baseline;
+}
+
+.icon-social {
+  fill: #ffffff;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
+  fill: var(--main-colot-wight);
+  background: var(--icon-shadow);
+  border-radius: 50%;
+}
+
+.footer-section {
+display: inline-block;
+justify-content: center;
+align-items: flex-start;
+margin-left: 70px;
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer-item {
+  margin-right: 10px;
+}
+
+.footer-item:last-child {
+  margin: 0;
+}
+
+.footer-item:hover {
+background: var(--hover-txt);
+border-radius: 50%;
+}
+
+
+
