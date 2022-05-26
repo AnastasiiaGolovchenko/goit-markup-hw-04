@@ -649,7 +649,7 @@ border-radius: 50%;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   color: var(--main-colot-wight);
   text-transform: uppercase;
@@ -681,8 +681,6 @@ border-radius: 50%;
 
 .footer-section {
 display: inline-block;
-justify-content: center;
-align-items: flex-start;
 margin-left: 70px;
 }
 
@@ -702,9 +700,8 @@ margin-left: 70px;
 .footer-item:hover,
 .footer-item:focus {
 background: var(--hover-txt);
+color: var(--hover-txt);
 border-radius: 50%;
-
-
 }
 
 
