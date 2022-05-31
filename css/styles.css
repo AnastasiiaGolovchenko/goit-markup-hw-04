@@ -93,6 +93,21 @@ ul {
   text-decoration: none;
 }
 
+/*приховою заголовки*/
+.visually-hidden  {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*крапки*/
 .nav-list,
 .header-list,
@@ -696,12 +711,10 @@ margin-left: 70px;
   margin: 0;
 }
 
-.footer-item:hover,
-.footer-item:focus {
-background: var(--hover-txt);
-color: var(--hover-txt);
-border-radius: 50%;
+.footer-icons:hover,
+.footer-icons:focus {
+  background: var(--hover-txt);
+  border-radius: 50%;
 }
-
 
 
