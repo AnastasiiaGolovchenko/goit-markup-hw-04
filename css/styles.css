@@ -114,7 +114,7 @@ ul {
 .about-list,
 .foto-list,
 .team-list,
-.footer-addres-list,
+.footer-address-list,
 .portfolio-list,
 .portfolio-list-foto,
 .team-icon-list {
@@ -536,6 +536,12 @@ border-radius: 50%;
 
 .portfolio-link {
   text-decoration: none;
+  display: block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+ box-shadow: var(--shadow-portfolio-card);
 }
 
 .portfolio-text {
@@ -582,14 +588,10 @@ border-radius: 50%;
   margin-top: 30px;
 }
 
-.portfolio-item-foto:hover,
-.portfolio-item-foto:focus {
-  box-shadow: var(--shadow-portfolio-card);
-}
-
 .prf-box {
   padding: 20px 24px;
   border: 1px solid var(--portfolio-br-card);
+  border-top: none;
 }
 
 /*ПОСТіЙНІ КЛІЄНТИ*/
@@ -641,6 +643,14 @@ border-radius: 50%;
   color: var(--main-colot-wight);
   margin-top: 20px;
 }
+
+.footer-address-link:hover,
+.footer-address-link:focus,
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+  color: var(--hover-txt);
+}
+
 
 .footer-contact {
   font-style: normal;
